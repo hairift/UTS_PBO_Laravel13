@@ -1,9 +1,19 @@
-# Katalog Menu Geprek Nusa
+<p align="center">
+  <img src="public/img/logo-geprek.jpg" alt="Geprek Nusa" width="130">
+</p>
 
-Rancangan awal Capstone Project untuk Ujian Tengah Semester mata kuliah
-Pemrograman Berorientasi Objek (TI033015). Aplikasi ini mengelola katalog menu
-sebuah jaringan outlet ayam geprek: satu baris katalog mewakili satu menu pada
-satu outlet, lengkap dengan sisa porsi, harga, dan kondisinya.
+<h1 align="center">Katalog Menu Geprek Nusa</h1>
+
+<p align="center">
+  Rancangan awal Capstone Project untuk UTS Pemrograman Berorientasi Objek (TI033015)<br>
+  Muhammad Arif Triyana &middot; 20251020011
+</p>
+
+---
+
+Aplikasi ini mengelola katalog menu sebuah jaringan outlet ayam geprek. Satu
+baris katalog mewakili satu menu pada satu outlet, lengkap dengan sisa porsi,
+harga, dan kondisinya.
 
 Studi kasus diambil dari Capstone Project
 [dfc-cirebon](https://github.com/Kharisdestianmaulana-hub/dfc-cirebon), yaitu
@@ -13,13 +23,6 @@ variabel, komponen tampilan, dan seluruh berkas kode berbeda dari proyek
 capstone tersebut. Yang diambil hanya tema besarnya, yaitu pengelolaan menu pada
 beberapa outlet, supaya pekerjaan UTS bisa dilanjutkan menjadi capstone tanpa
 memulai dari awal lagi.
-
-## Identitas
-
-- Nama: Muhammad Arif Triyana
-- NIM: 20251020011
-- Mata kuliah: Pemrograman Berorientasi Objek (TI033015)
-- Dosen: Hilman Lesmana, S.T., M.S.F.
 
 ## Ketentuan yang diikuti
 
@@ -83,40 +86,99 @@ tidak tampil kosong pada penggunaan pertama.
 
 ## Tangkapan layar
 
-Seluruh tangkapan layar di folder `docs` diambil dari aplikasi yang benar-benar
-berjalan, bukan gambar hasil rekayasa.
+Seluruh gambar di bawah diambil dari aplikasi yang benar-benar berjalan pada
+mesin sendiri: peramban sungguhan, jendela Command Prompt sungguhan, dan jendela
+VS Code sungguhan. Tidak ada gambar hasil rekayasa.
 
-| Berkas | Isi |
+### Halaman aplikasi
+
+**1. Halaman daftar**
+
+![Halaman daftar](docs/web-01-daftar.png)
+
+**2. Pencarian menu**
+
+![Pencarian](docs/web-02-cari.png)
+
+**3. Form tambah sebelum diisi**
+
+![Form tambah kosong](docs/web-03-form-tambah.png)
+
+**4. Form tambah setelah diisi**
+
+![Form tambah terisi](docs/web-04-form-terisi.png)
+
+**5. Baris baru masuk katalog**
+
+![Setelah tambah](docs/web-05-setelah-tambah.png)
+
+**6. Halaman detail**
+
+![Detail menu](docs/web-06-detail.png)
+
+**7. Form ubah terisi nilai lama**
+
+![Form ubah](docs/web-07-form-ubah.png)
+
+**8. Perubahan tersimpan**
+
+![Setelah ubah](docs/web-08-setelah-ubah.png)
+
+**9. Validasi silang menolak data**
+
+![Validasi](docs/web-09-validasi.png)
+
+**10. Kode yang tidak ada di katalog**
+
+![Kode tidak ada](docs/web-10-tidak-ada.png)
+
+**11. Keadaan sebelum penghapusan**
+
+![Sebelum hapus](docs/web-11-sebelum-hapus.png)
+
+**12. Dialog konfirmasi hapus**
+
+![Konfirmasi hapus](docs/web-12-konfirmasi-hapus.png)
+
+**13. Baris terhapus**
+
+![Setelah hapus](docs/web-13-setelah-hapus.png)
+
+### Kode sumber
+
+| Berkas route | Controller bagian atas |
 | --- | --- |
-| `code-01-rute.png` | Berkas `routes/web.php` |
-| `code-02-controller.png` | Controller bagian atas dan method `index` |
-| `code-03-controller-index.png` | Method `index` dan `create` |
-| `code-04-controller-simpan.png` | Method `store` dan `show` |
-| `code-05-controller-ubah.png` | Method `update` dan `destroy` |
-| `code-06-controller-validasi.png` | Aturan validasi dan pesan kesalahan |
-| `code-07-layout.png` | Layout bersama |
-| `code-08-index.png` | Halaman daftar bagian atas |
-| `code-09-index-tabel.png` | Tabel daftar beserta kolom wajib |
-| `code-10-create.png` | Form tambah |
-| `code-11-show.png` | Halaman detail |
-| `code-12-edit.png` | Form ubah dengan `@method('PUT')` |
-| `code-13-css.png` | Variabel warna dan dasar tampilan |
-| `term-01-rute.png` | Keluaran `php artisan route:list --path=menu` |
-| `term-02-versi.png` | Versi PHP dan Laravel |
-| `term-03-uji-http.png` | Uji status HTTP seluruh halaman |
-| `web-01-daftar.png` | Halaman daftar apa adanya |
-| `web-02-cari.png` | Pencarian menu |
-| `web-03-form-tambah.png` | Form tambah masih kosong |
-| `web-04-form-terisi.png` | Form tambah terisi |
-| `web-05-setelah-tambah.png` | Baris baru masuk katalog |
-| `web-06-detail.png` | Halaman detail |
-| `web-07-form-ubah.png` | Form ubah terisi nilai lama |
-| `web-08-setelah-ubah.png` | Perubahan tersimpan |
-| `web-09-validasi.png` | Validasi silang menolak data |
-| `web-10-tidak-ada.png` | Kode yang tidak ada di katalog |
-| `web-11-sebelum-hapus.png` | Keadaan sebelum penghapusan |
-| `web-12-konfirmasi-hapus.png` | Dialog konfirmasi hapus |
-| `web-13-setelah-hapus.png` | Baris terhapus dari katalog |
+| ![routes/web.php](docs/code-01-rute.png) | ![controller](docs/code-02-controller.png) |
+
+| Method index dan create | Method store dan show |
+| --- | --- |
+| ![index](docs/code-03-controller-index.png) | ![store](docs/code-04-controller-simpan.png) |
+
+| Method update dan destroy | Aturan validasi |
+| --- | --- |
+| ![update](docs/code-05-controller-ubah.png) | ![validasi](docs/code-06-controller-validasi.png) |
+
+| Layout bersama | Halaman daftar bagian atas |
+| --- | --- |
+| ![layout](docs/code-07-layout.png) | ![index](docs/code-08-index.png) |
+
+| Tabel katalog | Form tambah |
+| --- | --- |
+| ![tabel](docs/code-09-index-tabel.png) | ![tambah](docs/code-10-create.png) |
+
+| Halaman detail | Form ubah |
+| --- | --- |
+| ![detail](docs/code-11-show.png) | ![ubah](docs/code-12-edit.png) |
+
+![Berkas CSS](docs/code-13-css.png)
+
+### Terminal
+
+![Daftar route](docs/term-01-rute.png)
+
+![Versi PHP dan Laravel](docs/term-02-versi.png)
+
+![Uji status HTTP](docs/term-03-uji-http.png)
 
 ## Catatan
 
